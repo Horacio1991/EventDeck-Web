@@ -1,4 +1,4 @@
-const shot = (name, alt) => `<picture><source srcset="/assets/keyboard-${name}.webp" type="image/webp"><img src="/assets/keyboard-${name}.png" width="260" height="78" loading="lazy" decoding="async" alt="${alt}"></picture>`;
+const shot = (name, alt) => `<picture><source srcset="./assets/keyboard-${name}.webp" type="image/webp"><img src="./assets/keyboard-${name}.png" width="260" height="78" loading="lazy" decoding="async" alt="${alt}"></picture>`;
 export function keyboardControl() {
 return `<section class="story-section keyboard-control container" aria-labelledby="keyboard-title">
 <div class="keyboard-heading"><div><p class="story-kicker">CONTROL EN VIVO</p><h2 id="keyboard-title">Menos mouse.<br>Más control.</h2><p class="story-text">Cuando el evento está en marcha, no querés perder tiempo buscando botones. EventDeck te permite preparar y ejecutar acciones desde el teclado para mantener la atención donde importa: en el evento.</p></div>
