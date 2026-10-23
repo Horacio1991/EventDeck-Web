@@ -1,0 +1,11 @@
+import {readFile,access} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {product} from '../src/config.mjs';
+const html=await readFile('dist/index.html','utf8');
+assert.equal((html.match(/<h1\b/g)||[]).length,1);
+for(const value of ['lang="es"','name="description"','aria-controls="navigation"','aria-expanded="false"','<main','<figure','<picture','<figcaption',product.version]) assert(html.includes(value),value);
+for(const match of html.matchAll(/(?:src|href)="(\/[^"#]+)"/g)) await access('dist'+match[1]);
+const css=await readFile('dist/styles.css','utf8');
+assert(css.includes('prefers-reduced-motion'));assert(css.includes(':focus-visible'));
+console.log('Verificación OK: H1 único, metadatos, semántica, assets, versión y estilos accesibles.');
+await import('./check-support.mjs');
