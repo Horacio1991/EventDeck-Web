@@ -14,7 +14,7 @@ assert(!/<a\b/.test(section),'No enlaces de pago ni descarga de pack, ni siquier
 assert(!/autoplay|\bloop\s*(?:=|>)/.test(section),'Sin reproducción automática o loop');
 assert.equal((section.match(/<video controls muted playsinline preload="none"/g)||[]).length,4);
 assert(section.includes('No necesitás colaborar para usar EventDeck.'));
-assert.equal(product.downloadUrl,'https://github.com/Horacio1991/EventDeck/releases/download/v0.7.2/EventDeck-Setup-0.7.2.exe');
+assert.equal(product.downloadUrl,'https://github.com/Horacio1991/EventDeck/releases/download/v0.7.2-fix3/EventDeck-Setup-0.7.2.exe');
 assert.equal(html.split(`href="${product.downloadUrl}"`).length-1,3,'Las tres descargas oficiales se mantienen');
 const runtime=await readFile('src/support.js','utf8');
 assert(!/fetch\s*\(|XMLHttpRequest|URLSearchParams|location\.|localStorage|sessionStorage|innerHTML|supportStates/.test(runtime),'Runtime solo para previews');
