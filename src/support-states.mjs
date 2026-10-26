@@ -10,6 +10,14 @@ export const supportStates = Object.freeze({
   temporaryError: {title:'No pudimos consultar el estado.', text:'Ocurrió un error temporal. Intentá nuevamente en unos momentos.', action:'CONSULTAR ESTADO'},
   unavailable: {title:'El Visual Pack no está disponible en este momento.', text:'No podemos ofrecer la descarga ahora. Intentá nuevamente más tarde.'},
 });
+// Additional future-only states. Kept separate so the eight Hito 12 contracts stay intact.
+export const futureIntegrationStates = Object.freeze({
+  starting:{title:'Iniciando colaboración…',text:'Preparando el acceso al servicio de colaboración.'},
+  linkGenerated:{title:'Tu enlace de descarga está listo.',text:'El enlace es temporal.',action:'DESCARGAR VISUAL PACK'},
+});
+export function futureIntegrationTemplates() {
+  return Object.entries(futureIntegrationStates).map(([state,copy])=>`<template id="support-future-${state}"><div class="support-state" role="status"><h3>${copy.title}</h3><p>${copy.text}</p>${copy.action?`<button class="button secondary" type="button" disabled>${copy.action}</button>`:''}</div></template>`).join('');
+}
 export function supportStateTemplates() {
   return Object.entries(supportStates).map(([state,copy])=>`<template id="support-state-${state}"><div class="support-state" role="status" aria-live="polite" aria-atomic="true"><h3>${copy.title}</h3><p>${copy.text}</p>${copy.action?`<button class="button secondary" type="button" disabled>${copy.action}</button>`:''}</div></template>`).join('');
 }

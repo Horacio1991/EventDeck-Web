@@ -168,3 +168,7 @@ Build/checks/sintaxis correctos. Ocho detalles y ocho summaries, respuestas comp
 ## Hito 12 — Apoyo voluntario
 
 Ver `HITO-12-APOYO-VISUAL-PACK.md` para alcance, archivos, previews, verificaciones y estados futuros. La colaboración permanece deshabilitada; no existe conexión a Mercado Pago en este hito.
+
+## Hito 13A — Support API
+
+Ver `HITO-13A-INTEGRACION-SUPPORT-API.md`. Consulta pública de configuración con manejo de fallos y reintento; colaboración y descarga del pack permanecen bloqueadas. `npm test` ejecuta las nuevas pruebas sin llamar a servicios externos.

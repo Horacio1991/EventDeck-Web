@@ -5,7 +5,7 @@ import {supportStates} from '../src/support-states.mjs';
 import {product} from '../src/config.mjs';
 const html=await readFile('dist/index.html','utf8');
 const section=support();
-assert(html.includes(section),'Sección presente en el build');
+assert(html.includes(section.replace(/(src|href|poster|srcset)="\/(?!\/)/g, '$1="./')),'Sección presente en el build');
 assert(html.indexOf('id="faq-title"')<html.indexOf('id="apoyar"'),'Apoyo después de FAQ');
 assert.equal(Object.keys(supportStates).length,8);
 assert.equal((section.match(/<template /g)||[]).length,8);

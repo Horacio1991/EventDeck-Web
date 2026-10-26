@@ -9,3 +9,6 @@ const css=await readFile('dist/styles.css','utf8');
 assert(css.includes('prefers-reduced-motion'));assert(css.includes(':focus-visible'));
 console.log('Verificación OK: H1 único, metadatos, semántica, assets, versión y estilos accesibles.');
 await import('./check-support.mjs');
+
+assert(!/(?:src|href|poster|srcset)="\/(?!\/)/.test(html),'Assets portables');
+for(const match of html.matchAll(/(?:src|href|poster)="\.\/([^"#]+)"/g)) await access('dist/'+match[1]);

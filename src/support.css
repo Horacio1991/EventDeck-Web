@@ -47,3 +47,11 @@
 @media(max-width:599px){.support-section{padding-block:52px}.support-section .support-heading h2{font-size:clamp(29px,7.6vw,40px);letter-spacing:-.9px;line-height:1.2}.support-intro p,.support-pack-copy{font-size:15px}.support-previews{grid-template-columns:minmax(0,1fr);gap:24px}.support-section .support-preview figcaption{font-size:14px}.support-preview-help{font-size:14px}.support-gallery-heading>span{font-size:13px}.support-thanks h3{font-size:34px}.support-facts{gap:18px}.support-facts dt{font-size:11px;letter-spacing:.5px}.support-facts dd{font-size:15px}.support-uses,.support-courtesy,.support-action>p{font-size:14px}.support-section .support-cta{width:100%;justify-content:space-between;padding-inline:20px}.support-action>p{max-width:none}.support-free{gap:12px;margin-top:32px}.support-free strong{display:block}}
 /* Previews are always user-initiated, including reduced-motion. No entry animation. */
 @media(prefers-reduced-motion:reduce){.support-section *{animation:none!important;transition:none!important}}
+
+/* Hito 13A: service status only, no layout changes to previous sections. */
+.support-service{max-width:100%;overflow-wrap:anywhere}
+.support-service p:empty{display:none}
+.support-service p{font-size:14px;line-height:1.6;color:var(--muted);margin:12px 0 0}
+.support-service-retry{font:inherit;font-size:14px;color:var(--accent);background:transparent;border:1px solid var(--border);border-radius:6px;min-height:44px;padding:10px 12px;margin-top:12px;max-width:100%;cursor:pointer}
+.support-service-retry[hidden]{display:none}
+.support-service-retry:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
