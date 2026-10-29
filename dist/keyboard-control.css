@@ -3,3 +3,7 @@
 @media(max-width:1199px){.keyboard-heading{gap:32px}.keyboard-demos{gap:32px}.keyboard-functions{gap:12px}.keyboard-map dd{font-size:13px}}
 @media(max-width:959px){.keyboard-heading{grid-template-columns:minmax(0,1fr)}.keyboard-demos{grid-template-columns:minmax(0,1fr);gap:40px;margin-top:40px}.keyboard-demo h3{min-height:0;max-width:none}.keyboard-states{max-width:600px}.keyboard-map dd{font-size:14px}}
 @media(max-width:599px){.keyboard-map{padding:24px 0}.keyboard-functions{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.keyboard-navigation{gap:12px}.keyboard-demo h3{font-size:20px}.keyboard-states{grid-template-columns:minmax(0,1fr);gap:12px;max-width:320px}.keyboard-state-arrow{transform:rotate(90deg);padding:0;justify-self:center;line-height:1}.keyboard-states img{max-width:260px}.keyboard-states figcaption{font-size:14px;margin-top:8px}.keyboard-result{font-size:17px}.keyboard-closing{font-size:22px;margin-top:40px}}
+
+/* Context labels distinguish music shortcuts from operation controls. */
+.keyboard-map>.keyboard-context{color:var(--accent);font-size:12px;letter-spacing:1.2px;margin:0 0 14px}
+.keyboard-music{padding-top:0}

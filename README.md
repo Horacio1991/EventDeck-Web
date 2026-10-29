@@ -172,3 +172,7 @@ Ver `HITO-12-APOYO-VISUAL-PACK.md` para alcance, archivos, previews, verificacio
 ## Hito 13A — Support API
 
 Ver `HITO-13A-INTEGRACION-SUPPORT-API.md`. Consulta pública de configuración con manejo de fallos y reintento; colaboración y descarga del pack permanecen bloqueadas. `npm test` ejecuta las nuevas pruebas sin llamar a servicios externos.
+
+## Actualización oficial de la web a EventDeck v0.8.0
+
+La versión pública actual de esta entrega es **v0.8.0**. Ver `ACTUALIZACION-WEB-v0.8.0.md` para archivos, MÚSICA, descarga verificada y resultados. Los apartados anteriores son registros históricos de sus hitos; sus menciones a versiones antiguas no describen la descarga actual.

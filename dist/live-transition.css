@@ -27,3 +27,13 @@
 @media(max-width:1199px){.live-heading,.assisted-sequence{gap:32px}.manual-sequence ol{gap:12px}.transition-demo{padding:24px}.demo-track{grid-template-columns:64px minmax(0,1fr);gap:12px}.track-result{grid-column:2}}
 @media(max-width:959px){.live-heading,.assisted-sequence{grid-template-columns:minmax(0,1fr);gap:24px}.live-heading .story-text{max-width:650px}.manual-sequence ol{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 16px}.assisted-intro>p{max-width:none}.live-keys{margin-top:20px}.demo-track{grid-template-columns:64px minmax(0,1fr) 108px}.track-result{grid-column:auto}}
 @media(max-width:599px){.manual-sequence{margin-top:28px;padding-block:24px}.manual-sequence ol{grid-template-columns:minmax(0,1fr);gap:0}.manual-sequence li{display:flex;font-size:14px;align-items:baseline;gap:12px;border-top:0;border-left:1px solid var(--border);padding:8px 0 8px 16px}.manual-number{margin:0;flex-shrink:0}.manual-sequence li:not(:last-child)::after{content:none}.manual-sequence>p{margin-top:16px}.assisted-sequence{margin-top:28px}.assisted-intro>p{font-size:17px}.live-keys{gap:12px}.live-keys kbd{font-size:16px;padding:12px 18px}.transition-demo{padding:20px 16px}.demo-track{grid-template-columns:64px minmax(0,1fr);gap:10px}.track-result{grid-column:2}.demo-status{min-height:64px}.live-stages{grid-template-columns:minmax(0,1fr);gap:14px}.live-stages li{border-left:1px solid var(--border);padding-left:12px}.live-stages span{margin-top:3px}.live-closing{margin-top:32px;font-size:21px}}
+
+/* v0.8.0: compact editorial block within the existing live transition section. */
+.music-overview{margin-block:40px;padding-block:28px;border-block:1px solid var(--border);min-width:0}
+.music-overview h3{text-transform:none;letter-spacing:-.4px;font-size:clamp(23px,2.4vw,30px);line-height:1.35;font-weight:500;margin:0 0 16px}
+.music-overview>.story-text{max-width:900px}
+.music-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:28px}
+.music-benefits>div{min-width:0}
+.music-benefits h4{font-size:17px;line-height:1.5;font-weight:500;color:var(--text);margin:0 0 10px}
+.music-benefits p{font-size:15px;line-height:1.8;color:var(--muted);margin:0}
+@media(max-width:959px){.music-benefits{grid-template-columns:minmax(0,1fr);gap:24px}.music-overview{margin-block:32px}}
